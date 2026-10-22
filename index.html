@@ -139,8 +139,6 @@
     /* right-column blocks */
     .lead { color: var(--ink-soft); }
     .group-title { font-size: 17px; font-weight: 700; letter-spacing: -.02em; margin-bottom: 10px; }
-    /* left-column heading for a group (Contribution) */
-    .side-label { font-size: 17px; font-weight: 700; letter-spacing: -.02em; line-height: 1.6; }
     .cell { min-width: 0; }
 
     /* vertical rhythm — explicit, never sibling-dependent */
@@ -186,7 +184,6 @@
       .entry .meta { margin-bottom: 18px; }
       .entry .spacer { display: none; }
       .sub-label { margin-top: 20px; margin-bottom: 8px; }
-      .side-label { margin-bottom: 4px; }
       .entry + .entry { margin-top: 44px; }
       .mt-lg { margin-top: 24px; }
       .section-title { padding-top: 16px; }
@@ -276,8 +273,8 @@
           </p>
         </div>
 
-        <div class="side-label mt-lg">Contribution</div>
         <div class="spacer"></div>
+        <div class="cell mt-lg"><h4 class="group-title" style="margin-bottom:0">Contribution</h4></div>
 
         <div class="sub-label mt-md">NHN 와플랫체크<span class="sub-date">iOS 네이티브</span><span class="sub-date">2026.03 - 2026.08</span></div>
         <div class="cell mt-md">
@@ -318,8 +315,9 @@
           </ul>
         </div>
 
-        <div class="side-label mt-lg">Skills</div>
+        <div class="spacer"></div>
         <div class="cell mt-lg">
+          <h4 class="group-title">Skills</h4>
           <ul class="bullets">
             <li>iOS, Flutter, Android</li>
             <li>MVVM, Tuist, GetX</li>
@@ -343,8 +341,8 @@
           </p>
         </div>
 
-        <div class="side-label mt-lg">Contribution</div>
         <div class="spacer"></div>
+        <div class="cell mt-lg"><h4 class="group-title" style="margin-bottom:0">Contribution</h4></div>
 
         <div class="sub-label mt-md">KONWallet<span class="sub-date">Flutter</span><span class="sub-date">2024.04 - 2024.12</span></div>
         <div class="cell mt-md">
@@ -356,8 +354,9 @@
           </ul>
         </div>
 
-        <div class="side-label mt-lg">Skills</div>
+        <div class="spacer"></div>
         <div class="cell mt-lg">
+          <h4 class="group-title">Skills</h4>
           <ul class="bullets">
             <li>Flutter, Android, iOS</li>
             <li>GetX, Riverpod, Clean Architecture, MVVM</li>
@@ -380,8 +379,8 @@
           </p>
         </div>
 
-        <div class="side-label mt-lg">Contribution</div>
         <div class="spacer"></div>
+        <div class="cell mt-lg"><h4 class="group-title" style="margin-bottom:0">Contribution</h4></div>
 
         <div class="sub-label mt-md">KEYLOG<span class="sub-date">2022.03 - 2022.09</span></div>
         <div class="cell mt-md">
@@ -401,8 +400,9 @@
           </ul>
         </div>
 
-        <div class="side-label mt-lg">Skills</div>
+        <div class="spacer"></div>
         <div class="cell mt-lg">
+          <h4 class="group-title">Skills</h4>
           <ul class="bullets">
             <li>Flutter, Android (Kotlin), iOS</li>
             <li>Provider, BLoC, MVVM</li>
@@ -426,8 +426,8 @@
           </p>
         </div>
 
-        <div class="side-label mt-lg">Contribution</div>
         <div class="spacer"></div>
+        <div class="cell mt-lg"><h4 class="group-title" style="margin-bottom:0">Contribution</h4></div>
 
         <div class="sub-label mt-md">Thermo Hub<span class="sub-date">Flutter + 네이티브</span><span class="sub-date">2021.08 - 2021.11</span></div>
         <div class="cell mt-md">
@@ -446,8 +446,9 @@
           </ul>
         </div>
 
-        <div class="side-label mt-lg">Skills</div>
+        <div class="spacer"></div>
         <div class="cell mt-lg">
+          <h4 class="group-title">Skills</h4>
           <ul class="bullets">
             <li>Flutter, Android, iOS</li>
             <li>BLoC, Navigator 2.0</li>
@@ -471,8 +472,8 @@
           </p>
         </div>
 
-        <div class="side-label mt-lg">Contribution</div>
         <div class="spacer"></div>
+        <div class="cell mt-lg"><h4 class="group-title" style="margin-bottom:0">Contribution</h4></div>
 
         <div class="sub-label mt-md">mtag<span class="sub-date">Android 네이티브</span><span class="sub-date">2018.12 - 2019.03</span></div>
         <div class="cell mt-md">
@@ -496,8 +497,9 @@
           </ul>
         </div>
 
-        <div class="side-label mt-lg">Skills</div>
+        <div class="spacer"></div>
         <div class="cell mt-lg">
+          <h4 class="group-title">Skills</h4>
           <ul class="bullets">
             <li>Android (Java), C++ (NDK)</li>
             <li>BLE, Beacon, NFC, Wi-Fi</li>
@@ -670,8 +672,9 @@
           </p>
         </div>
 
-        <div class="side-label mt-lg">Contribution</div>
+        <div class="spacer"></div>
         <div class="cell mt-lg">
+          <h4 class="group-title">Contribution</h4>
           <ul class="bullets">
             <li>Figma → Figma MCP → Claude Code → 검증 → PR 5단계로 나누고, 되돌리기 어려운 <b>설계 확정 · 병합 2곳에만 개발자 승인 지점</b> 배치 (반려 시 해당 단계 재실행)</li>
             <li>PostToolUse Hooks로 포맷 · 정적 분석 · 단위 테스트 · gitleaks 시크릿 검사 <b>자동 검사 4종</b>을 걸어, 하나라도 실패하면 개발 단계로 되돌리는 흐름 설계</li>
@@ -681,8 +684,9 @@
           </ul>
         </div>
 
-        <div class="side-label mt-lg">Skills</div>
+        <div class="spacer"></div>
         <div class="cell mt-lg">
+          <h4 class="group-title">Skills</h4>
           <ul class="bullets">
             <li>Flutter, iOS (Swift · UIKit)</li>
             <li>Claude Code (CLAUDE.md, Hooks, Subagents)</li>
@@ -706,8 +710,9 @@
           </p>
         </div>
 
-        <div class="side-label mt-lg">Contribution</div>
+        <div class="spacer"></div>
         <div class="cell mt-lg">
+          <h4 class="group-title">Contribution</h4>
           <ul class="bullets">
             <li>Room 변경 이력 (PENDING → SYNCED) 기반 재전송과 요청 ID 중복 저장 방지로 <b>BLE로 비콘에 쓴 값과 서버 기록이 어긋나지 않도록</b> 설계</li>
             <li>BLE · 서버 레이어를 인터페이스로 추상화하고 Hilt로 Mock 구현체 주입, <b>실기기 · 실서버 없이 JVM 단위 테스트 52개</b>로 스캔 → 설정 변경 → 서버 반영 전체 흐름 검증</li>
@@ -716,8 +721,9 @@
           </ul>
         </div>
 
-        <div class="side-label mt-lg">Skills</div>
+        <div class="spacer"></div>
         <div class="cell mt-lg">
+          <h4 class="group-title">Skills</h4>
           <ul class="bullets">
             <li>Android (Kotlin)</li>
             <li>Jetpack Compose, MVVM, Hilt</li>
@@ -741,8 +747,9 @@
           </p>
         </div>
 
-        <div class="side-label mt-lg">Contribution</div>
+        <div class="spacer"></div>
         <div class="cell mt-lg">
+          <h4 class="group-title">Contribution</h4>
           <ul class="bullets">
             <li>공식 지원이 없는 Editor.js를 <b>JSON 해석 → HTML 재구성 방식으로 Flutter에 로컬화</b>한 피드 에디터 제작</li>
             <li>일반 · 소셜 로그인, 이벤트 피드 · 커뮤니티 (댓글 · 답글 · 추천) 개발</li>
