@@ -139,6 +139,8 @@
     /* right-column blocks */
     .lead { color: var(--ink-soft); }
     .group-title { font-size: 17px; font-weight: 700; letter-spacing: -.02em; margin-bottom: 10px; }
+    /* left-column heading for a group (Contribution) */
+    .side-label { font-size: 17px; font-weight: 700; letter-spacing: -.02em; line-height: 1.6; }
     .cell { min-width: 0; }
 
     /* vertical rhythm — explicit, never sibling-dependent */
@@ -184,6 +186,7 @@
       .entry .meta { margin-bottom: 18px; }
       .entry .spacer { display: none; }
       .sub-label { margin-top: 20px; margin-bottom: 8px; }
+      .side-label { margin-bottom: 4px; }
       .entry + .entry { margin-top: 44px; }
       .mt-lg { margin-top: 24px; }
       .section-title { padding-top: 16px; }
@@ -231,9 +234,9 @@
     <div class="wrap">
       <h1>안녕하세요,<br>저는 안치영입니다<span class="dot">.</span></h1>
       <p>
-        <span class="nb">Flutter와 <b>Android · iOS 네이티브</b>를</span> 오가며
+        <span class="nb">Flutter와 <b>Android · iOS 네이티브</b>로</span>
         <span class="nb">신규 개발부터 출시 · 운영까지</span> 수행해온
-        <span class="nb"><b>7년차 모바일 개발자</b>로,</span>
+        <span class="nb"><b>7년차 모바일 엔지니어</b>입니다.</span>
         <span class="nb"><b>헬스케어 · 핀테크 · IoT</b> 등</span>
         <span class="nb">다양한 도메인의 앱을</span> 만들어왔습니다.
       </p>
@@ -272,8 +275,8 @@
           </p>
         </div>
 
+        <div class="side-label mt-lg">Contribution</div>
         <div class="spacer"></div>
-        <div class="cell mt-lg"><h4 class="group-title" style="margin-bottom:0">Contribution</h4></div>
 
         <div class="sub-label mt-md">NHN 와플랫체크<span class="sub-date">iOS 네이티브 · 2026.03 - 2026.08</span></div>
         <div class="cell mt-md">
@@ -338,9 +341,8 @@
           </p>
         </div>
 
-        <div class="spacer"></div>
+        <div class="side-label mt-lg">Contribution</div>
         <div class="cell mt-lg">
-          <h4 class="group-title">Contribution</h4>
           <ul class="bullets">
             <li>NFT 민팅 상태 조회를 주기적 폴링에서 Pending 상태 + ViewModel 트리거 구조로 재설계하여 <b>추가 API 요청 n+1회 → 1회, NFT 정보 획득 체감시간 절반 이상 단축</b></li>
             <li>커스텀 네트워크 컨트롤러로 포그라운드 · 백그라운드 · 절전 · 통신 단절별 제어 (사일런트 푸시 · Background URLSession · WorkManager)를 구성해 <b>통신 오류 관련 VOC 100% 감소</b></li>
@@ -373,8 +375,8 @@
           </p>
         </div>
 
+        <div class="side-label mt-lg">Contribution</div>
         <div class="spacer"></div>
-        <div class="cell mt-lg"><h4 class="group-title" style="margin-bottom:0">Contribution</h4></div>
 
         <div class="sub-label mt-md">KEYLOG<span class="sub-date">2022.03 - 2022.09</span></div>
         <div class="cell mt-md">
@@ -418,9 +420,8 @@
           </p>
         </div>
 
-        <div class="spacer"></div>
+        <div class="side-label mt-lg">Contribution</div>
         <div class="cell mt-lg">
-          <h4 class="group-title">Contribution</h4>
           <ul class="bullets">
             <li>백그라운드에서 Flutter 엔진과 함께 수집이 멈추던 초기 설계를, <b>수집은 OS별 네이티브 · 표시는 Flutter로 분리</b>해 해결 (EventChannel 공통 데이터 형식)</li>
             <li>동시 연결 수 제한에 맞춰 밴드별 연결 → 수신 → 해제를 순환하는 1:N 다중 수집을 설계하여 <b>30대 기준 수집 주기 5분 이내</b> 목표 달성</li>
@@ -454,9 +455,8 @@
           </p>
         </div>
 
-        <div class="spacer"></div>
+        <div class="side-label mt-lg">Contribution</div>
         <div class="cell mt-lg">
-          <h4 class="group-title">Contribution</h4>
           <ul class="bullets">
             <li>선박 내 승선자 측위 앱 <b>mtag</b>: MQTT 위치 데이터 수신, 맵 배율별 위치 스케일링 개발로 <b>NIPA 과제 통과 및 GS 인증 획득</b></li>
             <li>치매인 간병 보조 앱 <b>GORI</b>: 투약 관리, 병동 낙상 · 이탈 알람, Unity 2D 기억력 게임 개발로 <b>부산의료원 필드 테스트를 거쳐 국가 과제 통과</b></li>
@@ -639,9 +639,8 @@
           </p>
         </div>
 
-        <div class="spacer"></div>
+        <div class="side-label mt-lg">Contribution</div>
         <div class="cell mt-lg">
-          <h4 class="group-title">Contribution</h4>
           <ul class="bullets">
             <li>Figma → Figma MCP → Claude Code → 검증 → PR 5단계로 나누고, 되돌리기 어려운 <b>설계 확정 · 병합 2곳에만 개발자 승인 지점</b> 배치 (반려 시 해당 단계 재실행)</li>
             <li>PostToolUse Hooks로 포맷 · 정적 분석 · 단위 테스트 · gitleaks 시크릿 검사 <b>자동 검사 4종</b>을 걸어, 하나라도 실패하면 개발 단계로 되돌리는 흐름 설계</li>
@@ -675,9 +674,8 @@
           </p>
         </div>
 
-        <div class="spacer"></div>
+        <div class="side-label mt-lg">Contribution</div>
         <div class="cell mt-lg">
-          <h4 class="group-title">Contribution</h4>
           <ul class="bullets">
             <li>Room 변경 이력 (PENDING → SYNCED) 기반 재전송과 요청 ID 중복 저장 방지로 <b>BLE로 비콘에 쓴 값과 서버 기록이 어긋나지 않도록</b> 설계</li>
             <li>BLE · 서버 레이어를 인터페이스로 추상화하고 Hilt로 Mock 구현체 주입, <b>실기기 · 실서버 없이 JVM 단위 테스트 52개</b>로 스캔 → 설정 변경 → 서버 반영 전체 흐름 검증</li>
@@ -710,9 +708,8 @@
           </p>
         </div>
 
-        <div class="spacer"></div>
+        <div class="side-label mt-lg">Contribution</div>
         <div class="cell mt-lg">
-          <h4 class="group-title">Contribution</h4>
           <ul class="bullets">
             <li>공식 지원이 없는 Editor.js를 <b>JSON 해석 → HTML 재구성 방식으로 Flutter에 로컬화</b>한 피드 에디터 제작</li>
             <li>일반 · 소셜 로그인, 이벤트 피드 · 커뮤니티 (댓글 · 답글 · 추천) 개발</li>
