@@ -131,7 +131,7 @@
     /* left-column label for one bullet group */
     .sub-label { font-size: 15px; font-weight: 700; letter-spacing: -.015em; color: var(--accent-deep); }
     .sub-label .sub-date {
-      display: block; margin-top: 2px;
+      display: block; margin-top: 2px; white-space: nowrap;
       font-size: 12.5px; font-weight: 400; color: var(--gray-2); letter-spacing: .01em;
       font-variant-numeric: tabular-nums;
     }
@@ -279,7 +279,7 @@
         <div class="side-label mt-lg">Contribution</div>
         <div class="spacer"></div>
 
-        <div class="sub-label mt-md">NHN 와플랫체크<span class="sub-date">iOS 네이티브 · 2026.03 - 2026.08</span></div>
+        <div class="sub-label mt-md">NHN 와플랫체크<span class="sub-date">iOS 네이티브</span><span class="sub-date">2026.03 - 2026.08</span></div>
         <div class="cell mt-md">
           <ul class="bullets">
             <li>콜드 스타트 푸시 딥링크를 수신과 실행을 분리한 Pending 딥링크 방식으로 재설계하여 <b>목적 화면 진입 성공률 60% → 100%</b> (12/20 → 40/40회)</li>
@@ -290,7 +290,7 @@
           </ul>
         </div>
 
-        <div class="sub-label mt-md">L사 I프로젝트<span class="sub-date">Flutter · 2025.04 - 2026.10</span></div>
+        <div class="sub-label mt-md">L사 I프로젝트<span class="sub-date">Flutter</span><span class="sub-date">2025.04 - 2026.10</span></div>
         <div class="cell mt-md">
           <ul class="bullets">
             <li>Flutter SDK <b>3.7.11 → 3.41.9를 4단계로 나눠 전환</b>하여 스토어 정책 대응 중 <b>운영 중단 없이</b> SDK · 의존성 라이브러리 호환성 확보, JVM 타깃 17, Play Core → Play Feature Delivery 교체</li>
@@ -304,23 +304,22 @@
         <div class="cell mt-md">
           <ul class="bullets">
             <li>NC문화재단 프로젝토리 (Android): AGP · Kotlin · 타깃 SDK 30 → 34 상향, JCenter → Maven Central · JitPack 교체, Android 10~14 파일 접근 권한 OS별 분리로 <b>Play Store 타깃 API 수준 요구사항 충족</b></li>
-            <li>BR코리아 베스킨라빈스 워크숍 (iOS): Apple Enterprise 인증서 · 프로비저닝 프로파일 갱신 관리와 MDM 환경 앱 배포 · 운영</li>
+            <li>BR코리아 베스킨라빈스 워크숍 (iOS): Apple Enterprise 인증서 · 프로비저닝 프로파일 갱신 관리와 MDM 환경 앱 배포 · VOC 대응 및 운영</li>
             <li>사내 출퇴근 시스템 앱 (Android · iOS): 앱-웹 브릿지 구조 개선, 업무입력 시스템 연동 신규 기능 개발</li>
           </ul>
         </div>
 
-        <div class="sub-label mt-md">프로세스 표준화<span class="sub-date">사내 업무 · 2025.03 - 2026.05</span></div>
+        <div class="sub-label mt-md">프로세스 표준화<span class="sub-date">사내 업무</span><span class="sub-date">2025.03 - 2026.05</span></div>
         <div class="cell mt-md">
           <ul class="bullets">
-            <li>모바일 개발 가이드 (코드 컨벤션 · Git 전략 · 민감정보 · 키 관리 · 배포 전 체크리스트)와 온보딩 문서화로 <b>출시 관련 타 부서 업무 지원 시간 단축</b>, 전사 공통 가이드로 활용</li>
+            <li>모바일 개발 가이드 (코드 컨벤션 · Git 전략 · 민감정보 및 키 관리 · 배포 전 체크리스트)와 온보딩 문서화로 <b>출시 관련 타 부서 업무 지원 시간 단축</b>, 전사 공통 가이드로 활용</li>
             <li>Firebase Crashlytics 도입 및 앱 내 수집 지표 표준화, 설계 · 개발 · 검증 · 리뷰 단계별 AI 활용 기준 정립</li>
             <li>외부 프로젝트 파견 인원의 주간 업무 · 진척률 · 애로사항을 확인하고 고객사 · 소속 조직과 공유해 조치 연계</li>
           </ul>
         </div>
 
-        <div class="spacer"></div>
+        <div class="side-label mt-lg">Skills</div>
         <div class="cell mt-lg">
-          <h4 class="group-title">Skills</h4>
           <ul class="bullets">
             <li>iOS, Flutter, Android</li>
             <li>MVVM, Tuist, GetX</li>
@@ -345,7 +344,10 @@
         </div>
 
         <div class="side-label mt-lg">Contribution</div>
-        <div class="cell mt-lg">
+        <div class="spacer"></div>
+
+        <div class="sub-label mt-md">KONWallet<span class="sub-date">Flutter</span><span class="sub-date">2024.04 - 2024.12</span></div>
+        <div class="cell mt-md">
           <ul class="bullets">
             <li>NFT 민팅 상태 조회를 주기적 폴링에서 Pending 상태 + ViewModel 트리거 구조로 재설계하여 <b>추가 API 요청 n+1회 → 1회, NFT 정보 획득 체감시간 절반 이상 단축</b></li>
             <li>커스텀 네트워크 컨트롤러로 포그라운드 · 백그라운드 · 절전 · 통신 단절별 제어 (사일런트 푸시 · Background URLSession · WorkManager)를 구성해 <b>통신 오류 관련 VOC 100% 감소</b></li>
@@ -354,9 +356,8 @@
           </ul>
         </div>
 
-        <div class="spacer"></div>
+        <div class="side-label mt-lg">Skills</div>
         <div class="cell mt-lg">
-          <h4 class="group-title">Skills</h4>
           <ul class="bullets">
             <li>Flutter, Android, iOS</li>
             <li>GetX, Riverpod, Clean Architecture, MVVM</li>
@@ -400,9 +401,8 @@
           </ul>
         </div>
 
-        <div class="spacer"></div>
+        <div class="side-label mt-lg">Skills</div>
         <div class="cell mt-lg">
-          <h4 class="group-title">Skills</h4>
           <ul class="bullets">
             <li>Flutter, Android (Kotlin), iOS</li>
             <li>Provider, BLoC, MVVM</li>
@@ -427,19 +427,27 @@
         </div>
 
         <div class="side-label mt-lg">Contribution</div>
-        <div class="cell mt-lg">
+        <div class="spacer"></div>
+
+        <div class="sub-label mt-md">Thermo Hub<span class="sub-date">Flutter + 네이티브</span><span class="sub-date">2021.08 - 2021.11</span></div>
+        <div class="cell mt-md">
           <ul class="bullets">
             <li>백그라운드에서 Flutter 엔진과 함께 수집이 멈추던 초기 설계를, <b>수집은 OS별 네이티브 · 표시는 Flutter로 분리</b>해 해결 (EventChannel 공통 데이터 형식)</li>
             <li>동시 연결 수 제한에 맞춰 밴드별 연결 → 수신 → 해제를 순환하는 1:N 다중 수집을 설계하여 <b>30대 기준 수집 주기 5분 이내</b> 목표 달성</li>
             <li>Android Foreground Service · iOS CoreBluetooth 상태 복원으로 <b>1시간 백그라운드 수집 테스트 빈 구간 빈도 10%</b>, 거리 이탈 후 <b>사용자 조작 없이 자동 재연결</b></li>
             <li>네이티브 전처리 (prescaling)로 <b>장시간 실행에도 메모리 증가 없음</b>, 무응답 타임아웃 · 측정 시각 기준 중복 제거 및 정렬</li>
-            <li>울주군 방재 시스템 위치정보 수집 앱의 iOS 백그라운드 GPS 수집 주기 안정화와 ATT 대응</li>
           </ul>
         </div>
 
-        <div class="spacer"></div>
+        <div class="sub-label mt-md">울주군 방재 시스템<span class="sub-date">Flutter</span><span class="sub-date">2021.06 - 2021.11</span></div>
+        <div class="cell mt-md">
+          <ul class="bullets">
+            <li>위치정보 수집 앱의 iOS 백그라운드 GPS 수집 주기 안정화와 ATT 대응</li>
+          </ul>
+        </div>
+
+        <div class="side-label mt-lg">Skills</div>
         <div class="cell mt-lg">
-          <h4 class="group-title">Skills</h4>
           <ul class="bullets">
             <li>Flutter, Android, iOS</li>
             <li>BLoC, Navigator 2.0</li>
@@ -464,18 +472,32 @@
         </div>
 
         <div class="side-label mt-lg">Contribution</div>
-        <div class="cell mt-lg">
+        <div class="spacer"></div>
+
+        <div class="sub-label mt-md">mtag<span class="sub-date">Android 네이티브</span><span class="sub-date">2018.12 - 2019.03</span></div>
+        <div class="cell mt-md">
           <ul class="bullets">
-            <li>선박 내 승선자 측위 앱 <b>mtag</b>: MQTT 위치 데이터 수신, 맵 배율별 위치 스케일링 개발로 <b>NIPA 과제 통과 및 GS 인증 획득</b></li>
-            <li>치매인 간병 보조 앱 <b>GORI</b>: 투약 관리, 병동 낙상 · 이탈 알람, Unity 2D 기억력 게임 개발로 <b>부산의료원 필드 테스트를 거쳐 국가 과제 통과</b></li>
+            <li>선박 내 승선자 측위 앱: MQTT 위치 데이터 수신, 맵 배율별 위치 스케일링 개발로 <b>NIPA 과제 통과 및 GS 인증 획득</b></li>
+          </ul>
+        </div>
+
+        <div class="sub-label mt-md">GORI<span class="sub-date">Android 네이티브</span><span class="sub-date">2017.08 - 2018.12</span></div>
+        <div class="cell mt-md">
+          <ul class="bullets">
+            <li>치매인 간병 보조 앱: 투약 관리, 병동 낙상 · 이탈 알람, Unity 2D 기억력 게임 개발로 <b>부산의료원 필드 테스트를 거쳐 국가 과제 통과</b></li>
+          </ul>
+        </div>
+
+        <div class="sub-label mt-md">하드웨어 연동 앱<span class="sub-date">Android 네이티브</span><span class="sub-date">2015.12 - 2018.05</span></div>
+        <div class="cell mt-md">
+          <ul class="bullets">
             <li>중장비 굴착 모니터링 앱: 굴착기 선회부의 IMU 데이터를 NDK로 계산해 회전반경 · 작업량 모니터링</li>
             <li>비콘 관리 · 영유아 학습 (NFC · Wi-Fi) · 반려동물 오토피더 단말 등 하드웨어 연동 앱과 단말 통신 규격 설계</li>
           </ul>
         </div>
 
-        <div class="spacer"></div>
+        <div class="side-label mt-lg">Skills</div>
         <div class="cell mt-lg">
-          <h4 class="group-title">Skills</h4>
           <ul class="bullets">
             <li>Android (Java), C++ (NDK)</li>
             <li>BLE, Beacon, NFC, Wi-Fi</li>
@@ -659,9 +681,8 @@
           </ul>
         </div>
 
-        <div class="spacer"></div>
+        <div class="side-label mt-lg">Skills</div>
         <div class="cell mt-lg">
-          <h4 class="group-title">Skills</h4>
           <ul class="bullets">
             <li>Flutter, iOS (Swift · UIKit)</li>
             <li>Claude Code (CLAUDE.md, Hooks, Subagents)</li>
@@ -695,9 +716,8 @@
           </ul>
         </div>
 
-        <div class="spacer"></div>
+        <div class="side-label mt-lg">Skills</div>
         <div class="cell mt-lg">
-          <h4 class="group-title">Skills</h4>
           <ul class="bullets">
             <li>Android (Kotlin)</li>
             <li>Jetpack Compose, MVVM, Hilt</li>
