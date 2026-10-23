@@ -136,6 +136,14 @@
       font-variant-numeric: tabular-nums;
     }
 
+    .sub-label .sub-link {
+      display: inline-block; margin-top: 4px;
+      font-size: 12.5px; font-weight: 500; color: var(--accent-deep);
+      text-decoration: underline; text-underline-offset: 3px;
+      text-decoration-thickness: 1px; text-decoration-color: var(--accent);
+    }
+    .sub-label .sub-link:hover { color: var(--accent); }
+
     /* right-column blocks */
     .lead { color: var(--ink-soft); }
     .group-title { font-size: 17px; font-weight: 700; letter-spacing: -.02em; margin-bottom: 10px; }
@@ -241,7 +249,7 @@
         이외에 NFT 기반 앱에서 민팅 직후 주기적 폴링에 의존하던 데이터 동기화를 개선하여 <b>API 요청횟수를 단 1회로</b> 줄이는 등 성능과 안정성을 수치에 기반한 성과로 도출하였습니다.
       </p>
       <p>
-        가장 자신있는 도메인은 <b>IoT, 통신</b>입니다. Android 네이티브를 통해 보편적인 통신규격을 다루며 지식과 경험을 섭렵해왔고, 나아가 Flutter와 iOS 네이티브에서 해당 지식과 경험을 활용하고 있습니다.
+        가장 자신있는 도메인은 <b>IoT, 통신, 헬스케어</b>입니다. Android 네이티브를 통해 보편적인 통신규격을 다루며 지식과 경험을 섭렵해왔고, 나아가 Flutter와 iOS 네이티브에서 해당 지식과 경험을 활용하고 있습니다.
       </p>
       <p>
         <b>B2B, B2C, B2G</b> 앱을 출시 및 유지보수 하였고, 부산의료원 필드 앱 운용과 중장비 모니터링 앱 등 관제 및 실시간 대응에 대한 역량을 가지고 있습니다.
@@ -272,7 +280,7 @@
         <div class="spacer"></div>
         <div class="cell mt-lg"><h4 class="group-title" style="margin-bottom:0">Contribution</h4></div>
 
-        <div class="sub-label mt-md">NHN 와플랫체크<span class="sub-date">iOS 네이티브</span><span class="sub-date">2026.03 - 2026.08</span></div>
+        <div class="sub-label mt-md">NHN 와플랫체크<span class="sub-date">iOS 네이티브</span><span class="sub-date">2026.03 - 2026.08</span><a class="sub-link" href="https://apps.apple.com/kr/app/%EC%99%80%ED%94%8C%EB%9E%AB-%EC%B2%B4%ED%81%AC/id6759086996" target="_blank" rel="noopener">앱 스토어</a></div>
         <div class="cell mt-md">
           <ul class="bullets">
             <li>콜드 스타트 푸시 딥링크를 수신과 실행을 분리한 Pending 딥링크 방식으로 재설계하여 <b>목적 화면 진입 성공률 60% → 100%</b> (12/20 → 40/40회)</li>
