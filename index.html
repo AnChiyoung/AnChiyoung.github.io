@@ -150,6 +150,33 @@
     }
     .sub-label .title-link:hover { background-size: 100% 1.5px; }
     .sub-label .title-link:hover::after { color: var(--accent); transform: translate(1px, -1px); }
+    button.title-link { font: inherit; letter-spacing: inherit; border: 0; padding: 0; margin: 0; background-color: transparent; cursor: pointer; text-align: left; }
+
+    /* store chooser popup */
+    .store-dialog {
+      margin: auto; /* the global reset removes the dialog's default centering */
+      border: 0; padding: 0; border-radius: 14px; width: min(320px, calc(100% - 40px));
+      box-shadow: 0 18px 48px rgba(16, 24, 40, .18); color: var(--ink);
+    }
+    .store-dialog::backdrop { background: rgba(16, 20, 24, .38); }
+    .store-dialog .sd-body { padding: 22px 22px 18px; }
+    .store-dialog h4 { font-size: 17px; font-weight: 700; letter-spacing: -.02em; margin-bottom: 4px; }
+    .store-dialog p { font-size: 13px; color: var(--gray); margin-bottom: 16px; }
+    .store-dialog .sd-links { list-style: none; display: grid; gap: 8px; }
+    .store-dialog .sd-links a {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 12px 14px; border: 1px solid var(--line); border-radius: 10px;
+      font-size: 15px; font-weight: 600; color: var(--ink); text-decoration: none;
+      transition: border-color .18s, background-color .18s, color .18s;
+    }
+    .store-dialog .sd-links a::after { content: "↗"; font-size: .8em; color: var(--gray-2); transition: color .18s, transform .18s; }
+    .store-dialog .sd-links a:hover { border-color: var(--accent); background: var(--accent-wash); color: var(--accent-deep); }
+    .store-dialog .sd-links a:hover::after { color: var(--accent); transform: translate(1px, -1px); }
+    .store-dialog .sd-close {
+      display: block; width: 100%; margin-top: 14px; padding: 10px 0; border: 0; background: none;
+      font: inherit; font-size: 13.5px; color: var(--gray); cursor: pointer;
+    }
+    .store-dialog .sd-close:hover { color: var(--ink); }
 
     /* right-column blocks */
     .lead { color: var(--ink-soft); }
@@ -355,7 +382,7 @@
         <div class="spacer"></div>
         <div class="cell mt-lg"><h4 class="group-title" style="margin-bottom:0">Contribution</h4></div>
 
-        <div class="sub-label mt-md">KONWallet<span class="sub-date">Flutter</span><span class="sub-date">2024.04 - 2024.12</span></div>
+        <div class="sub-label mt-md"><button class="title-link" type="button" data-dialog="store-konwallet" aria-haspopup="dialog">KONWallet</button><span class="sub-date">Flutter</span><span class="sub-date">2024.04 - 2024.12</span></div>
         <div class="cell mt-md">
           <ul class="bullets">
             <li>NFT 민팅 상태 조회를 주기적 폴링에서 Pending 상태 + ViewModel 트리거 구조로 재설계하여 <b>추가 API 요청 n+1회 → 1회, NFT 정보 획득 체감시간 절반 이상 단축</b></li>
@@ -843,6 +870,19 @@
     </div>
   </footer>
 
+  <!-- ============ STORE POPUP ============ -->
+  <dialog class="store-dialog" id="store-konwallet" aria-labelledby="store-konwallet-title">
+    <div class="sd-body">
+      <h4 id="store-konwallet-title">KONWallet</h4>
+      <p>다운로드할 스토어를 선택하세요.</p>
+      <ul class="sd-links">
+        <li><a href="https://apps.apple.com/kr/app/%EC%BD%98%EC%9B%94%EB%A0%9B-konwallet/id1660178515" target="_blank" rel="noopener">앱 스토어</a></li>
+        <li><a href="https://play.google.com/store/apps/details?id=com.wallet.app.wallet_app" target="_blank" rel="noopener">플레이 스토어</a></li>
+      </ul>
+      <button class="sd-close" type="button" data-close>닫기</button>
+    </div>
+  </dialog>
+
   <script>
     (function () {
       if ('IntersectionObserver' in window) {
@@ -855,6 +895,20 @@
       } else {
         document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('in'); });
       }
+    })();
+    (function () {
+      document.querySelectorAll('[data-dialog]').forEach(function (btn) {
+        var dlg = document.getElementById(btn.getAttribute('data-dialog'));
+        if (!dlg) return;
+        btn.addEventListener('click', function () {
+          if (typeof dlg.showModal === 'function') dlg.showModal(); else dlg.setAttribute('open', '');
+        });
+        dlg.addEventListener('click', function (e) {
+          if (e.target === dlg || e.target.hasAttribute('data-close')) {
+            if (typeof dlg.close === 'function') dlg.close(); else dlg.removeAttribute('open');
+          }
+        });
+      });
     })();
   </script>
 
