@@ -150,7 +150,8 @@
     }
     .sub-label .title-link:hover { background-size: 100% 1.5px; }
     .sub-label .title-link:hover::after { color: var(--accent); transform: translate(1px, -1px); }
-    button.title-link { font: inherit; letter-spacing: inherit; border: 0; padding: 0; margin: 0; background-color: transparent; cursor: pointer; text-align: left; }
+    /* a button is an inline-block as tall as the line; shrink it to the text so the underline sits where it does on the <a> */
+    button.title-link { font: inherit; line-height: 1.2; letter-spacing: inherit; border: 0; padding: 0; margin: 0; background-color: transparent; cursor: pointer; text-align: left; }
 
     /* store chooser popup */
     .store-dialog {
@@ -306,8 +307,8 @@
         </div>
         <div class="cell">
           <p class="lead">
-            고객사 앱 및 사내 앱의 <b>신규 개발 · 출시와 유지보수</b>를 iOS 네이티브 · Flutter · Android 네이티브로 담당하며,
-            <b>AI 활용 개발 워크플로우</b>와 모바일 개발 프로세스 표준화를 함께 맡고 있습니다.
+            고객사 앱 및 사내 앱의 <b>신규 개발 · 출시와 유지보수</b>를 담당하고 있습니다.<br>
+            iOS 네이티브 · Flutter · Android 네이티브를 활용하고 있으며, <b>모바일 AI 개발 워크플로우</b>와 개발 프로세스 표준화, 문서화를 맡고 있습니다.
           </p>
         </div>
 
@@ -318,7 +319,7 @@
         <div class="cell mt-md">
           <ul class="bullets">
             <li>콜드 스타트 푸시 딥링크를 수신과 실행을 분리한 Pending 딥링크 방식으로 재설계하여 <b>목적 화면 진입 성공률 60% → 100%</b> (12/20 → 40/40회)</li>
-            <li>Claude Code CLI 기반 코드검증 워크플로우 (CLAUDE.md · Hooks · Skills · Subagents)를 적용해, 스펙 위반을 코드리뷰가 아닌 <b>코드 생성 직후 자동 검사</b>로 차단하여 <b>QA 558항목 중 523항목 무수정 통과, 코드리뷰 시간 약 50% 단축</b></li>
+            <li>Claude Code (CLAUDE.md · Hooks · Skills · Subagents) 워크플로우를 구성하고, Spec Driven Development를 확장해 <b>코드 생성 시점에 스펙 준수를 자동 검사</b>하여 <b>QA 558항목 중 523항목 무수정 통과, 코드리뷰 시간 약 50% 단축</b></li>
             <li>초대 기능 WKWebView 브릿지를 요청 · 응답 (함수형)과 상태 알림 (이벤트형)으로 분리 설계하여 <b>웹-앱 간 재요청 제거 및 로딩 전 이벤트 유실 해소</b></li>
             <li>Tuist 멀티모듈 설계, 구글 · 애플 로그인, 구독형 인앱결제, 사일런트 푸시 체크인 · NSE, 카메라 기반 생체신호 수집, 위변조 탐지 기능 개발</li>
             <li>유니버설 · 디퍼드 딥링크 처리 흐름 통합, 3개 국어 지원, 오픈소스 라이선스 고지 자동화 스크립트 작성</li>
@@ -641,7 +642,7 @@
       <div class="entry">
         <div class="meta">
           <h3>KONWallet</h3>
-          <p class="role">Flutter</p>
+          <p class="role">Flutter · 상태 기반 동기화</p>
         </div>
         <div class="cell">
           <h4 class="group-title">NFT 완료를 계속 물어보느라 반영이 늦고 앱이 느려지던 문제</h4>
@@ -784,7 +785,7 @@
       <div class="entry">
         <div class="meta">
           <h3>SENSE</h3>
-          <p class="role">RUNNERS · 모바일 개발</p>
+          <p class="role">팀 사이드 프로젝트 · RUNNERS</p>
           <p class="date">2023.01 - 2023.11</p>
         </div>
         <div class="cell">
@@ -799,7 +800,7 @@
           <ul class="bullets">
             <li>공식 지원이 없는 Editor.js를 <b>JSON 해석 → HTML 재구성 방식으로 Flutter에 로컬화</b>한 피드 에디터 제작</li>
             <li>일반 · 소셜 로그인, 이벤트 피드 · 커뮤니티 (댓글 · 답글 · 추천) 개발</li>
-            <li>Firebase App Distribution 기반 ASO · 테스트 배포 환경 구축</li>
+            <li>Firebase App Distribution 배포 · 테스트 배포 환경 구축, ASO 수행</li>
           </ul>
         </div>
       </div>
@@ -838,6 +839,16 @@
           </ul>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- ============ EDUCATION ============ -->
+  <section class="reveal" id="education">
+    <div class="wrap">
+      <h2 class="section-title">Education</h2>
+      <ul class="bullets">
+        <li>부산대학교 대학원 ICT융합학과 · 석사 졸업 · 2017.03 - 2019.02</li>
+      </ul>
     </div>
   </section>
 
