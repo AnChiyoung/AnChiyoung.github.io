@@ -137,18 +137,20 @@
     }
 
     /* external link on a label title: ↗ after the text, underline grows on hover */
+    /* a real text-decoration is snapped to whole pixels, so the line is equally thick wherever the label lands
+       (a 1.5px background bar rendered thicker or thinner depending on the element's sub-pixel position) */
     .sub-label .title-link {
-      color: inherit; text-decoration: none;
-      background-image: linear-gradient(var(--accent), var(--accent));
-      background-repeat: no-repeat; background-size: 0% 1.5px; background-position: 0 100%;
-      transition: background-size .22s, color .18s;
+      color: inherit;
+      text-decoration-line: underline; text-decoration-thickness: 2px; text-underline-offset: 4px;
+      text-decoration-color: transparent;
+      transition: text-decoration-color .18s, color .18s;
     }
     .sub-label .title-link::after {
       content: "↗"; display: inline-block; margin-left: 3px;
       font-size: .66em; font-weight: 600; color: var(--gray-2); vertical-align: .18em;
       transition: color .18s, transform .18s;
     }
-    .sub-label .title-link:hover { background-size: 100% 1.5px; }
+    .sub-label .title-link:hover { text-decoration-color: var(--accent); }
     .sub-label .title-link:hover::after { color: var(--accent); transform: translate(1px, -1px); }
     /* a button is an inline-block as tall as the line; shrink it to the text so the underline sits where it does on the <a> */
     button.title-link { font: inherit; line-height: 1.2; letter-spacing: inherit; border: 0; padding: 0; margin: 0; background-color: transparent; cursor: pointer; text-align: left; }
@@ -488,7 +490,9 @@
         <div class="sub-label mt-md">울주군 방재 시스템<br>위치정보 수집 앱<span class="sub-date">Flutter</span><span class="sub-date">2021.06 - 2021.11</span></div>
         <div class="cell mt-md">
           <ul class="bullets">
-            <li>iOS 백그라운드 GPS 수집 주기 안정화와 ATT 대응</li>
+            <li>iOS 백그라운드 GPS 수집 주기 안정화</li>
+            <li>수집 주기 · 백그라운드 허용 · 알림 사용자 설정 개발</li>
+            <li>iOS 14.5 앱 추적 투명성 (ATT) 대응</li>
           </ul>
         </div>
 
